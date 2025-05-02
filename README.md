@@ -52,10 +52,15 @@ DATABASE_URL = "mysql+mysqlconnector://<user>:<password>@localhost:3306/iseras_a
 ```
 
 ### 4. Create Tables
-Inside `main.py`, temporarily add:
+Open `main.py` and add the following lines at the bottom of the file, right after your route definitions:
 ```python
-Base.metadata.create_all(bind=engine)
+if __name__ == "__main__":
+    import uvicorn
+    Base.metadata.create_all(bind=engine)
+    uvicorn.run(app, host="127.0.0.1", port=8000)
 ```
+This will create all necessary tables on the database.
+
 Run the file once:
 ```bash
 python main.py
