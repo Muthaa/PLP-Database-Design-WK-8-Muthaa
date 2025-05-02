@@ -130,11 +130,3 @@ POST /logs/
 | DELETE | /logs/{id}       | Delete log                |
 
 ---
-
-## 💡 Next Steps (Optional Enhancements)
-- Docker containerization
-- Role-based access (RBAC)
-- Notification/email triggers for appointments
-- Analytics endpoints for mood patterns
-
----
